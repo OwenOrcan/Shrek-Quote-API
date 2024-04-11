@@ -18,20 +18,3 @@ def random_quote(request):
     return Response(serializer.data)
 
 
-@api_view(['POST'])
-def add_quote(request):
-    serializer = QuoteSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-@api_view(['POST'])
-def put_all_data(request):
-    if request.method == 'POST':
-        serializer = QuoteSerializer(data=request.data, many=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
