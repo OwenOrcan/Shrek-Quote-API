@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 import dj_database_url
 DATABASES = {
-    'default': dj_database_url.config(default=f'postgres://owen:orhan@localhost:5455/shrekapi', conn_max_age=600, ssl_require=True)
+    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
 
 """DATABASES = {
