@@ -1,3 +1,7 @@
+# DISCLAIMER
+## I got bored and stopped paying for deployment if you need a shrek quote send me a dm on discord
+
+
 # SHREK QUOTE API
 
 ### HOW TO USE
